@@ -69,7 +69,16 @@ class SenhasController < ApplicationController
     end
     # senha.save
     if(senhaChamada == nil)
-      render json: {nothing: 1}
+      senha = Senha.where(rechamado: true, dataRechamado: nil, setor_id: 1).limit(1)
+      for senhaChamada in senha.each
+        senhaChamada.dataRechamado = DateTime.now;
+        senhaChamada.save;
+      end
+      if(senhaChamada == nil)
+        render json: {nothing: 1}
+      else
+        render json: senhaChamada
+      end
     else
       render json: senhaChamada
     end
@@ -83,10 +92,37 @@ class SenhasController < ApplicationController
     end
     # senha.save
     if(senhaChamada == nil)
+      senha = Senha.where(rechamado: false, dataRechamado: nil, setor_id: 1).limit(1)
+      for senhaChamada in senha.each
+        senhaChamada.rechamado = 1;
+        senhaChamada.save;
+      end
+      if(senhaChamada == nil)
+        render json: {nothing: 1}
+      else
+        render json: senhaChamada
+      end
       render json: {nothing: 1}
     else
       render json: senhaChamada
     end
+  end
+
+  def recall
+    senha = Senha.where(rechamado: false, dataRechamado: nil, setor_id: 1, id: :id).limit(1)
+    for senhaChamada in senha.each
+      senhaChamada.rechamado = 1;
+      senhaChamada.save;
+    end
+    if(senhaChamada == nil)
+      render json: {nothing: 1}
+    else
+      render json: senhaChamada
+    end
+  end
+
+  def last3
+    render json: Senha.where(chamado: true).where.not(dataChamado: nil).order('-id').limit(3);
   end
 
   private
