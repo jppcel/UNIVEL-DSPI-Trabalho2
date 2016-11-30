@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @senha.senha %>
+</p>
+
+<p>
+  <strong>Datageracao:</strong>
+  <%= @senha.dataGeracao %>
+</p>
+
+<p>
+  <strong>Chamado:</strong>
+  <%= @senha.chamado %>
+</p>
+
+<p>
+  <strong>Datachamado:</strong>
+  <%= @senha.dataChamado %>
+</p>
+
+<p>
+  <strong>Rechamado:</strong>
+  <%= @senha.rechamado %>
+</p>
+
+<p>
+  <strong>Datarechamado:</strong>
+  <%= @senha.dataRechamado %>
+</p>
+
+<p>
+  <strong>Isprioritario:</strong>
+  <%= @senha.isPrioritario %>
+</p>
+
+<p>
+  <strong>Setor:</strong>
+  <%= @senha.setor_id %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @senha.usuario_id %>
+</p>
+
+<%= link_to 'Edit', edit_senha_path(@senha) %> |
+<%= link_to 'Back', senhas_path %>

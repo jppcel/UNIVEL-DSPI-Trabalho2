@@ -1,0 +1,2 @@
+class Senha < ApplicationRecord
+end

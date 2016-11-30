@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="medium-48 column">
+
+    <p id="notice"><%= notice %></p>
+
+    <h1>Senhas</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Senha</th>
+          <th>Data de Geração</th>
+          <th>Chamado?</th>
+          <th>Data do Chamado</th>
+          <th>Rechamado:</th>
+          <th>Data do Rechamado</th>
+          <th>É prioritário?</th>
+          <th>Setor</th>
+          <th>Usuario</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @senhas.each do |senha| %>
+          <tr>
+            <td><%= senha.senha %></td>
+            <td><%= senha.dataGeracao %></td>
+            <td><%= senha.chamado %></td>
+            <td><%= senha.dataChamado %></td>
+            <td><%= senha.rechamado %></td>
+            <td><%= senha.dataRechamado %></td>
+            <td><%= senha.isPrioritario %></td>
+            <td><%= senha.setor_id %></td>
+            <td><%= senha.usuario_id %></td>
+            <td><%= link_to 'Mostrar', senha %></td>
+            <td><%= link_to 'Editar', edit_senha_path(senha) %></td>
+            <td><%= link_to 'Deletar', senha, method: :delete, data: { confirm: 'Você tem certeza disso?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Nova Senha', new_senha_path %>
+  </div>
+</div>

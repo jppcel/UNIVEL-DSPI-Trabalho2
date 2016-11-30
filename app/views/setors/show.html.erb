@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome do Setor:</strong>
+  <%= @setor.nomeSetor %>
+</p>
+
+<p>
+  <strong>Letra:</strong>
+  <%= @setor.letraSetor %>
+</p>
+
+<p>
+  <strong>Ultima Senha:</strong>
+  <%= @setor.ultimaSenha %>
+</p>
+
+<%= link_to 'Editar', edit_setor_path(@setor), class: 'button' %> |
+<%= link_to 'Voltar', setors_path, class: 'button secondary' %>

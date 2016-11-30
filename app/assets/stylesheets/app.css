@@ -1,0 +1,54 @@
+.displayNone{
+  display: none;
+}
+
+#relogio h1{
+  font-size: 9rem !important;
+}
+
+#senha, .senha{
+  text-align: center;
+}
+#senha, #senhas{
+  height: 100vh;
+}
+#senha{
+  background: #0099ff;
+  color: #fff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+	flex-flow: column;
+	align-items: center;
+}
+#senha h1{
+  font-size: 12rem;
+  font-weight: bold;
+}
+#senha h3{
+  font-size: 3rem;
+  font-weight: bold;
+}
+#senha h4{
+  font-size: 2rem;
+  font-weight: bold;
+}
+#senha h5{
+  font-size: 2rem;
+}
+#senhas{
+  background: #00444d;
+  color: #fff;
+}
+.isPrioritario{
+  background: red !important;
+}
+#senhas > h4{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.senha h3{
+  font-weight: bold;
+}

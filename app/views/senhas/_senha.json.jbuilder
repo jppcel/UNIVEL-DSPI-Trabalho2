@@ -1,0 +1,2 @@
+json.extract! senha, :id, :senha, :dataGeracao, :chamado, :dataChamado, :rechamado, :dataRechamado, :isPrioritario, :setor_id, :usuario_id, :created_at, :updated_at
+json.url senha_url(senha, format: :json)

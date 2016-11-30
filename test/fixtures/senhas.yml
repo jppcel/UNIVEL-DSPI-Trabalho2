@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  senha: MyString
+  dataGeracao: 2016-11-29 13:30:03
+  chamado: 
+  dataChamado: 2016-11-29 13:30:03
+  rechamado: false
+  dataRechamado: 2016-11-29 13:30:03
+  isPrioritario: false
+  setor_id: 1
+  usuario_id: 1
+
+two:
+  senha: MyString
+  dataGeracao: 2016-11-29 13:30:03
+  chamado: 
+  dataChamado: 2016-11-29 13:30:03
+  rechamado: false
+  dataRechamado: 2016-11-29 13:30:03
+  isPrioritario: false
+  setor_id: 1
+  usuario_id: 1

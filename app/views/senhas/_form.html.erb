@@ -1,0 +1,32 @@
+<%= form_for(senha) do |f| %>
+  <% if senha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(senha.errors.count, "error") %> prohibited this senha from being saved:</h2>
+
+      <ul>
+      <% senha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :senha, "Senha" %>
+    <%= f.text_field :senha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :setor_id %>
+    <%= f.number_field :setor_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :usuario_id %>
+    <%= f.number_field :usuario_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
